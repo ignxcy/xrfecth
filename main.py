@@ -21,14 +21,6 @@ bgwhite = "\033[1;47;37m"
 # Get the kernel
 kernel = system()
 
-# Setup fonts
-def setup_fonts():
-    if kernel != 'Android':
-        if 'Material.ttf' not in subprocess.getoutput("fc-match :family='Material' 2>/dev/null"):
-            subprocess.run(["mkdir", "-p", "$HOME/.local/share/fonts"])
-            subprocess.run(["cp", "ttf-material-design-icons/*", "$HOME/.local/share/fonts"])
-            subprocess.run(["fc-cache", "-vf", "&>/dev/null"])
-
 # Get the init
 def get_init():
     if kernel == "Android":
