@@ -189,8 +189,6 @@ def get_de_wm():
 
     return wm if wm else 'unknown'
 
-setup_fonts()
-
 print("               ")
 
 if kernel == 'Android':
